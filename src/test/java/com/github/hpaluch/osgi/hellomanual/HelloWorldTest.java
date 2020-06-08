@@ -1,12 +1,11 @@
 package com.github.hpaluch.osgi.hellomanual;
 
 import org.junit.Test;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleContext;
 
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 public class HelloWorldTest {
     @Test
@@ -19,5 +18,7 @@ public class HelloWorldTest {
 
         HelloWorld helloWorld = new HelloWorld();
         helloWorld.start(context);
+
+        verify(bundle, times(1)).getLocation();
     }
 }
