@@ -44,3 +44,4 @@ uninstall <ID>
 
 This example is loosely based on Hello World from "Modular Java" book.
 
+# osgi-test-maven-demo
