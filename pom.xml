@@ -5,7 +5,7 @@
   <version>0.0.1-SNAPSHOT</version>
   <name>HelloOSGiManual</name>
   <description>Manaul hello world OSGi project (basically from Modular Java book)</description>
-  
+
   <build>
     <plugins>
     <plugin>
@@ -17,10 +17,15 @@
             <manifestFile>src/main/resources/META-INF/MANIFEST.MF</manifestFile>
           </archive>
         </configuration>
-      </plugin>    
+      </plugin>
     </plugins>
   </build>
-  
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
   <dependencies>
   	<dependency>
   		<groupId>org.osgi</groupId>
@@ -28,5 +33,19 @@
   		<version>4.3.1</version>
   		<scope>provided</scope>
   	</dependency>
+      <!-- https://mvnrepository.com/artifact/junit/junit -->
+      <dependency>
+          <groupId>junit</groupId>
+          <artifactId>junit</artifactId>
+          <version>4.13</version>
+          <scope>test</scope>
+      </dependency>
+      <!-- https://mvnrepository.com/artifact/org.mockito/mockito-core -->
+      <dependency>
+          <groupId>org.mockito</groupId>
+          <artifactId>mockito-core</artifactId>
+          <version>2.28.2</version>
+          <scope>test</scope>
+      </dependency>
   </dependencies>
 </project>
