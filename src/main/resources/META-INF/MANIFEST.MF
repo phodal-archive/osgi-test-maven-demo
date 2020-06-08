@@ -1,6 +1,8 @@
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: hellomanual.HelloWorld
 Bundle-Name: HelloWorld
+Bundle-SymbolicName: com.github.hpaluch.osgi.hellomanual.service
 Bundle-Version: 1.0.0
 Bundle-Activator: com.github.hpaluch.osgi.hellomanual.HelloWorld
 Import-Package: org.osgi.framework
+Export-Package: com.github.hpaluch.osgi.hellomanual.service
