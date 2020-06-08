@@ -1,10 +1,12 @@
 package com.github.hpaluch.osgi.hellomanual;
 
+import org.osgi.framework.Bundle;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 public class HelloWorld implements BundleActivator {
     public void start(BundleContext context) throws Exception {
+        context.getBundle().getHeaders().put("example", "hello");
         System.out.println("Hello started: " + context.getBundle().getLocation());
     }
 
