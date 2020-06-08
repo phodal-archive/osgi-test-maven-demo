@@ -13,6 +13,7 @@ public class PowerHelloWorld implements BundleActivator {
     public void start(BundleContext context) throws Exception {
         HelloService helloService = new HelloServiceImpl();
         helloServiceRegistration = context.registerService(HelloService.class.getName(), helloService, null);
+        helloService.sayHello();
     }
 
     public void stop(BundleContext context) throws Exception {
